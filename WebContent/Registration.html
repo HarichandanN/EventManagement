@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body {
+	background-image: url('https://www.visionvivaah.com/blog/wp-content/uploads/2019/11/Top-10-Event-Management-Companies-In-India.jpg');
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.container {
+	background-color: rgba(200, 200, 200, 0.5);
+	font-weight: bold;
+	width: 400px;
+	padding: 20px;
+}
+.container input[type="text"],
+.container input[type="number"],
+.container input[type="email"],
+.container input[type="password"] {
+	margin-bottom: 10px;
+	width: 100%;
+	padding: 8px;
+	box-sizing: border-box;
+}
+
+.container label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.container input[type="submit"] {
+	width: 100%;
+	padding: 10px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+	background-color: #45a049;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<form action="RegistrationServlet" method="post">
+			<h1>Register Details</h1>
+			Name<input type="text" name="Name" required>
+			LastName<input type="text" name="SName" required> 
+			Mobile<input type="number" name="mobile" required>
+			Email<input type="email" name="email" required>
+			Password<input type="password" name="password" required>
+			Role<input type="text" name="role" placeholder="Enter User" required>
+			<input type="submit" value="Register">
+			
+		</form>
+	</div>
+</body>
+</html>

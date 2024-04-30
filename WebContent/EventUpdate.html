@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body {
+	background-image: url('https://www.visionvivaah.com/blog/wp-content/uploads/2019/11/Top-10-Event-Management-Companies-In-India.jpg');
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.container {
+	background-color: rgba(200, 200, 200, 0.5);
+	font-weight: bold;
+	width: 400px;
+	padding: 20px;
+}
+.container input[type="text"],
+.container input[type="number"] {
+	margin-bottom: 10px;
+	width: 100%;
+	padding: 8px;
+	box-sizing: border-box;
+}
+
+.container label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.container input[type="submit"] {
+	width: 100%;
+	padding: 10px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+	background-color: #45a049;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<form action="UpdateEventServlet" method="post">
+			<h1>Update Events</h1>
+			Id<input type="text" name="id" id="id" required>
+			Name<input type="text" name="Name" id="Name" required> 
+			Price<input type="number" name="price" id="price" required> 
+			<input type="submit" value="Update">
+			
+		</form>
+	</div>
+	
+	<script>
+		function getParameterByName(name, url) {
+		    if (!url) url = window.location.href;
+		    name = name.replace(/[\[\]]/g, "\\$&");
+		    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		        results = regex.exec(url);
+		    if (!results) return null;
+		    if (!results[2]) return '';
+		    return decodeURIComponent(results[2].replace(/\+/g, " "));
+		}
+
+		var id = getParameterByName('id');
+		var eventName = getParameterByName('eventname');
+		var eventPrice = getParameterByName('eventprice');
+
+		document.getElementById('id').value = id;
+		document.getElementById('Name').value = eventName;
+		document.getElementById('price').value = eventPrice;
+	</script>
+</body>
+</html>
